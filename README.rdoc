@@ -1,3 +1,5 @@
+WORKING ON: Making add link a page only for users
+
 ## HACKER NEWS CLONE
 
 Here are your stories:
