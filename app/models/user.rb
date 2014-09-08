@@ -1,9 +1,9 @@
-class User < ActiveRecord::Base 
+class User < ActiveRecord::Base
 
 	has_secure_password
-	validates :email, uniqueness: true 
+	validates :email, uniqueness: true
 
-	has_many :links 
-	has_many :comments 
+	has_many :links
+	has_many :comments
 
-end 
+end
