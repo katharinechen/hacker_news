@@ -6,5 +6,6 @@
     <%= f.label :url %>
       <%= f.text_field :url, class: "form-control" %>
   </div>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.submit(:class => "btn btn-info") %>
 <% end %>

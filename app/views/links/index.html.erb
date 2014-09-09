@@ -10,7 +10,7 @@
         <td><a href="<%=link.url%>">Title(<%= link.url %>)</a></td>
       </tr>
       <tr>
-        <td><%= link.sum_vote %> points by link.user "time_since_created" | "number_of_comments" comments</td>
+        <td><%= link.sum_vote %> points by <%= link.user.email %> "time_since_created" | "number_of_comments" comments</td>
       </tr>
     <% end %>
   </table>
