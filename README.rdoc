@@ -1,6 +1,10 @@
-WOKRING ON
+WOKRING ON -make functioning upvote button
 
+--sum_total? delete?
 
+            <%= f.hidden_field :user_id, :value => "#{current_user.id}"%>
+
+-maybe delete votes model
 
 ## HACKER NEWS CLONE
 
