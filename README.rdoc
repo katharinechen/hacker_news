@@ -1,5 +1,11 @@
 WOKRING ON -add create to LinksController (make sure it add things properly)
 
+user_id
+
+
+time_created
+number_of_comments
+
 
 - print it nicely on the index page
 - add gem Mechanize (to get title)
