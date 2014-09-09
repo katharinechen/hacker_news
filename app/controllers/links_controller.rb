@@ -1,6 +1,5 @@
 class LinksController < ApplicationController
 
-
   before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
 
   def index

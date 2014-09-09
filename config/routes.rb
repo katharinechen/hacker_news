@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
-  resources :links do
+  resources :links, :except => [:edit, :update] do
     resources :comments
   end
 

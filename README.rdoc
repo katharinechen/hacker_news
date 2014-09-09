@@ -1,4 +1,6 @@
-WORKING ON: Making add link a page only for users
+WOKRING ON: make add link form
+add bootstrap
+add gem Mechanize (to get title)
 
 ## HACKER NEWS CLONE
 
@@ -31,6 +33,13 @@ end
 To display comments on comments, make each comment a partial. For each comment, loop through the comments on the comment, recursively rendering partial within itself.
 
 * Add user avatar and profile page
+
+*   resources :links, :except => [:edit, :update] do
+    resources :comments
+  end
+
+  * many :execpt resources links
+
 
 ##Conventional Rails assessment
 
