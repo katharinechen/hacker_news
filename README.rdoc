@@ -1,5 +1,10 @@
-WOKRING ON: make add link form
-add bootstrap
+WORKING ON: add bootstrap to pages
+
+-add create to LinksController
+-print it nicely on all.
+
+
+
 add gem Mechanize (to get title)
 
 ## HACKER NEWS CLONE

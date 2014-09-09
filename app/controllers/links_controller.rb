@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
 
-  before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authorize, only: [:new, :create, :destroy]
 
   def index
     @links = Link.all
@@ -12,12 +12,7 @@ class LinksController < ApplicationController
   end
 
   def create
-  end
 
-  def edit
-  end
-
-  def update
   end
 
   def destroy
