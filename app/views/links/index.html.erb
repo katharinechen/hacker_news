@@ -7,23 +7,12 @@
       <tr>
         <td rowspan="2">Number</td>
         <td rowspan="2">Arrow image</td>
-        <td><a href="<%=link.url%>">Title(<%= link.url %>)</a></td>
+        <td><a href="<%=link.url%>"><%=link.page_title%> (<%= link.url %>)</a></td>
       </tr>
       <tr>
-        <td><%= link.sum_vote %> points by <%= link.user.email %> "time_since_created" | "number_of_comments" comments</td>
+        <td><%= link.sum_vote %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <%= link.comments.length %> comments</td>
       </tr>
     <% end %>
   </table>
 
 </div>
-
-<!--   <table class="table table-hover">
-    <tr>
-      <td rowspan="2">Number</td>
-      <td rowspan="2">Arrow image</td>
-      <td>Title(url)</td>
-    </tr>
-    <tr>
-      <td>Points by user time | number of comments</td>
-    </tr>
-  </table> -->

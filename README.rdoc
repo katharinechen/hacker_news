@@ -1,21 +1,8 @@
-WOKRING ON -add create to LinksController (make sure it add things properly)
-
-user_id
-
-
-time_created
-number_of_comments
-
-
-- print it nicely on the index page
-- add gem Mechanize (to get title)
-
+WOKRING ON
 
 
 
 ## HACKER NEWS CLONE
-
-* As a user, I want to post a link, so that I can share it with other nerds.
 
 * As a user, I want to vote up other people's links, so that I can promote links that I like.
 

@@ -7,4 +7,10 @@ class Link < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
+  def page_title
+    mechanize = Mechanize.new
+    page = mechanize.get(self.url)
+    page.title
+  end
+
 end
