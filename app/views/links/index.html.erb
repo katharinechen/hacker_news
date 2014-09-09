@@ -1,3 +1,29 @@
 <%= render('layouts/navbar.html.erb') %>
 
-<p>INDEX</p>
+<div class="container">
+
+  <table class="table table-condensed">
+    <% Link.all.each do |link| %>
+      <tr>
+        <td rowspan="2">Number</td>
+        <td rowspan="2">Arrow image</td>
+        <td><a href="<%=link.url%>">Title(<%= link.url %>)</a></td>
+      </tr>
+      <tr>
+        <td>"number_of_points" points by "user" "time_since_created" | "number_of_comments" comments</td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
+
+<!--   <table class="table table-hover">
+    <tr>
+      <td rowspan="2">Number</td>
+      <td rowspan="2">Arrow image</td>
+      <td>Title(url)</td>
+    </tr>
+    <tr>
+      <td>Points by user time | number of comments</td>
+    </tr>
+  </table> -->

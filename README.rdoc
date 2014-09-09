@@ -1,18 +1,13 @@
-WORKING ON: add bootstrap to pages
-
--add create to LinksController
--print it nicely on all.
+WOKRING ON -add create to LinksController (make sure it add things properly)
 
 
+- print it nicely on the index page
+- add gem Mechanize (to get title)
 
-add gem Mechanize (to get title)
+
+
 
 ## HACKER NEWS CLONE
-
-Here are your stories:
-
-
-* navbar home(with all articles), new(new articles), and submit(submit articles)
 
 * As a user, I want to post a link, so that I can share it with other nerds.
 
@@ -25,6 +20,8 @@ Here are your stories:
 * As a user, I want to comment on a link, so that I can have a discussion about the article that was submitted.
 
 * As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it.
+
+* links are not working
 
 * Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
 class Comment < ActiveRecord::Base
@@ -45,30 +42,6 @@ To display comments on comments, make each comment a partial. For each comment, 
 
   * many :execpt resources links
 
-
-##Conventional Rails assessment
-
-Build a Rails app with at least two models, including authentication.
-
-* Does your code continue to meet all of the standards from last week?
-
-* Do the routes use resources properly?
-
-* Are unused routes removed?
-
-* Is implicit rendering used properly in controllers?
-
-* Are route helpers used for all URLs?
-
-* Are all forms built with form helpers?
-
-* Is the app protected from CSRF?
-
-* Is the app protected from mass-assignment?
-
-* Is there thorough integration test coverage?
-
-* Is authentication implemented properly?
 
 ## Questions
 

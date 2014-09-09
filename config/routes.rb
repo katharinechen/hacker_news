@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
 	root :to => 'links#index'
 
 	get 'signup', to: 'users#new', as: 'signup'
