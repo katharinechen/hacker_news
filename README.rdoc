@@ -1,8 +1,6 @@
-WOKRING ON -make functioning upvote button
+WORKING ON:
 
 --sum_total? delete?
-
-            <%= f.hidden_field :user_id, :value => "#{current_user.id}"%>
 
 -maybe delete votes model
 
@@ -18,6 +16,7 @@ WOKRING ON -make functioning upvote button
 
 * As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it.
 
+* taking away the localhost:3000/? question mark
 * links are not working
 
 * Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
