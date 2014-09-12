@@ -10,7 +10,7 @@
         <td rowspan="2">
 
           <% if current_user != nil %>
-            <%= form_for link.votes.new do |f| %>
+            <%= form_for @vote do |f| %>
               <%= f.hidden_field :user_id, :value => "#{current_user.id}"%>
               <%= f.hidden_field :link_id, :value => link.id %>
               <%= image_submit_tag "up_button.png", :id => "button-#{link.id}" %>

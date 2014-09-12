@@ -3,6 +3,7 @@ class LinksController < ApplicationController
   before_filter :authorize, only: [:new, :create, :destroy]
 
   def index
+    @vote = Vote.new
     @links = Link.all
   end
 
