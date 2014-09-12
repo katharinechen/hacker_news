@@ -15,6 +15,7 @@ class VotesController < ApplicationController
     if (Vote.where(user_id: current_user.id).take == nil) && (current_user.id != @vote.link.user_id)
       if @vote.save
         flash[:notice] = "Thank you for submitting a vote."
+        # @vote.link.update_attribute :sum_vote, Vote.where(link_id = @vote.link_id).length
         redirect_to root_url
       end
     else
@@ -23,9 +24,6 @@ class VotesController < ApplicationController
     end
   end
 
-  # if (the vote saved) && (the current user is not in the vote table) &&
-  #(the current_user is not the author)
-
 private
 
   def vote_params
@@ -33,3 +31,5 @@ private
   end
 
 end
+
+

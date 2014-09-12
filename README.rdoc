@@ -1,15 +1,13 @@
-WORKING ON: As a user, I can only vote for links that I haven't voted for and does not belong to me. (WRITING SPEC)--positive specs
+WORKING ON: * As a user, I want the links with the most votes to be listed first, so that I can know what's most popular on index. (writing a popular scope)
 
-* As a user, I want the links with the most votes to be listed first, so that I can know what's most popular.
+Why is logging in changing the point values? I AM SO CONFUSED.
 
-
+*add New page (with all new links). organized by time
 
 *add images for flash[:notice] and flash[:alert]
-* sum_total? delete?
-* maybe delete votes model
-* vote only once
+* sum_total == link.votes.length
 * image does not show when users are logged out
-* new page should rank it by newest_create_by
+
 
 ## HACKER NEWS CLONE
 
@@ -44,17 +42,6 @@ To display comments on comments, make each comment a partial. For each comment, 
 * Is the app protected from mass-assignment?
 * Is there thorough integration test coverage?
 * Is authentication implemented properly?
-
-
-
-
-
-
-
-
-
-
-
 
 <--REAL README -->
 

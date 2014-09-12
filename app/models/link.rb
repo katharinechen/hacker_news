@@ -13,4 +13,8 @@ class Link < ActiveRecord::Base
     page.title
   end
 
+  default_scope { order('created_at DESC') }
+
+  # scope :popular, ~> { order(".sum_vote DESC") }
+
 end
