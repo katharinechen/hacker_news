@@ -12,7 +12,7 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(vote_params)
-    if (Vote.find(current_user.id) == []) && (current_user.id != @vote.link.user_id)
+    if (Vote.where(user_id: current_user.id).take == nil) && (current_user.id != @vote.link.user_id)
       if @vote.save
         flash[:notice] = "Thank you for submitting a vote."
         redirect_to root_url

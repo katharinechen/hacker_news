@@ -13,10 +13,10 @@
             <%= form_for link.votes.new do |f| %>
               <%= f.hidden_field :user_id, :value => "#{current_user.id}"%>
               <%= f.hidden_field :link_id, :value => link.id %>
-              <%= image_submit_tag("up_button.png")%>
+              <%= image_submit_tag "up_button.png", :id => "button-#{link.id}" %>
             <% end %>
           <% else %>
-            <a href="/login"><input type="image" name="submit" value="submit" src="../../assets/images/up_button.png"></button></a>
+            <a href="/login"><input type="image" name="submit" value="submit" src="../../assets/images/up_button.png"></input></a>
           <% end %>
 
         </td>
