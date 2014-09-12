@@ -1,25 +1,20 @@
-WORKING ON:
+WORKING ON: As a user, I can only vote for links that I haven't voted for and does not belong to me.
 
---sum_total? delete?
-
--maybe delete votes model
+*add images for flash[:notice] and flash[:alert]
+* sum_total? delete?
+* maybe delete votes model
+* vote only once
+* image does not show when users are logged out
+* new page should rank it by newest_create_by
 
 ## HACKER NEWS CLONE
 
-* As a user, I want to vote up other people's links, so that I can promote links that I like.
 
 * As a user, I want the links with the most votes to be listed first, so that I can know what's most popular.
-
 * As a user, I want the link ranking to be a function of both the number of votes and the time since the post, so that popular links don't stay on the homepage forever. Hint: come up with a way to score links where they get a certain number of points for how new they are, and a certain number for how many votes they have. Don't spend too much time fussing with the algorithm - just make up something simple.
-
 * As a user, I want to comment on a link, so that I can have a discussion about the article that was submitted.
+* As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it. Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
 
-* As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it.
-
-* taking away the localhost:3000/? question mark
-* links are not working
-
-* Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
 class Comment < ActiveRecord::Base
   belongs_to :commentable, :polymorphic => true
   has_many :comments, :as => :commentable
@@ -28,17 +23,67 @@ end
 class Link < ActiveRecord::Base
   has_many :comments, :as => :commentable
 end
+
 To display comments on comments, make each comment a partial. For each comment, loop through the comments on the comment, recursively rendering partial within itself.
 
-* Add user avatar and profile page
 
-*   resources :links, :except => [:edit, :update] do
-    resources :comments
-  end
+##Conventional Rails assessment
+###Build a Rails app with at least two models, including authentication.
 
-  * many :execpt resources links
+* Does your code continue to meet all of the standards from last week?
+* Do the routes use resources properly?
+* Are unused routes removed?
+* Is implicit rendering used properly in controllers?
+* Are route helpers used for all URLs?
+* Are all forms built with form helpers?
+* Is the app protected from CSRF?
+* Is the app protected from mass-assignment?
+* Is there thorough integration test coverage?
+* Is authentication implemented properly?
 
 
-## Questions
 
-* Why doesn't the session controller need a session object?
+
+
+
+
+
+
+
+
+
+<--REAL README -->
+
+##About
+This project is completed by Katharine Chen for the Conventional Rails assessment for Epicodus.
+
+##Description
+This is simple clone of the popular tech new website Hacker News.
+
+##Current Functionality
+* As a user, I want to post a link, so that I can share it with other nerds.
+* As a user, I want to vote up other people's links, so that I can promote links that I like.
+
+##Installation
+Clone the repo in your terminal by entering:
+  git clone https://github.com/katharinechen/hacker_news.git
+
+Setup your environment by:
+  bundle
+  bundle update
+
+Setup your database:
+  rake db:create
+  rake db:migrate
+  rake db:seed
+
+To view the website, visit in your broswer:
+  localhost:3000
+
+
+
+
+
+
+
+
