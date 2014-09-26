@@ -11,7 +11,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
-gem 'mechanize'
+# gem 'mechanize', '~> 2.7.3'
 
 group :development do
   gem 'better_errors'

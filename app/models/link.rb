@@ -7,11 +7,12 @@ class Link < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
-  def page_title
-    mechanize = Mechanize.new
-    page = mechanize.get(self.url)
-    page.title
-  end
+  #working code: re-use after Mechanize gem is fixed
+  # def page_title
+  #   mechanize = Mechanize.new
+  #   page = mechanize.get(self.url)
+  #   page.title
+  # end
 
   default_scope { order('created_at DESC') }
 

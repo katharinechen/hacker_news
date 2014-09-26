@@ -16,11 +16,11 @@
               <%= image_submit_tag "up_button.png", :id => "button-#{link.id}" %>
             <% end %>
           <% else %>
-            <a href="/login"><input type="image" name="submit" value="submit" src="../../assets/images/up_button.png"></input></a>
+            <a href="/login"><input type="image" name="submit" value="submit" alt="Up button" src="/assets/up_button.png"></input></a>
           <% end %>
 
         </td>
-        <td><a href="<%=link.url%>"><%=link.page_title%> (<%= link.url %>)</a></td>
+        <td><a href="<%=link.url%>"><%#=link.page_title%> (<%= link.url %>)</a></td>
       </tr>
       <tr>
         <td><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <%= link.comments.length %> comments</td>

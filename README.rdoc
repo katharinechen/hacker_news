@@ -1,23 +1,20 @@
-WORKING ON: * As a user, I want the links with the most votes to be listed first, so that I can know what's most popular on index. (writing a popular scope)
+WORKING ON: 
 
-voting doesn't work perfectly(can't vote a second time)
-
-Why is logging in changing the point values? I AM SO CONFUSED.
-
-*add New page (with all new links). organized by time
-
-*add images for flash[:notice] and flash[:alert]
-* sum_total == link.votes.length
-* image does not show when users are logged out
+- [ ] As a user, I want the links with the most votes to be listed first, so that I can know what's most popular on index. (writing a popular scope)
+- [ ] voting doesn't work perfectly(can't vote a second time)
+- [ ] Why is logging in changing the point values? I AM SO CONFUSED.
+- [ ] add New page (with all new links). organized by time
+- [ ] add images for flash[:notice] and flash[:alert]
+- [ ] sum_total == link.votes.length
 
 
 ## HACKER NEWS CLONE
 
-* As a user, I want the link ranking to be a function of both the number of votes and the time since the post, so that popular links don't stay on the homepage forever. Hint: come up with a way to score links where they get a certain number of points for how new they are, and a certain number for how many votes they have. Don't spend too much time fussing with the algorithm - just make up something simple.
+- [ ] As a user, I want the link ranking to be a function of both the number of votes and the time since the post, so that popular links don't stay on the homepage forever. Hint: come up with a way to score links where they get a certain number of points for how new they are, and a certain number for how many votes they have. Don't spend too much time fussing with the algorithm - just make up something simple.
 
-* As a user, I want to comment on a link, so that I can have a discussion about the article that was submitted.
+- [ ] As a user, I want to comment on a link, so that I can have a discussion about the article that was submitted.
 
-* As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it. Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
+- [ ] As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it. Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
 
 class Comment < ActiveRecord::Base
   belongs_to :commentable, :polymorphic => true
@@ -28,7 +25,7 @@ class Link < ActiveRecord::Base
   has_many :comments, :as => :commentable
 end
 
-To display comments on comments, make each comment a partial. For each comment, loop through the comments on the comment, recursively rendering partial within itself.
+- [ ] To display comments on comments, make each comment a partial. For each comment, loop through the comments on the comment, recursively rendering partial within itself.
 
 
 ##Conventional Rails assessment
@@ -45,39 +42,46 @@ To display comments on comments, make each comment a partial. For each comment, 
 * Is there thorough integration test coverage?
 * Is authentication implemented properly?
 
-<--REAL README -->
 
-##About
+THINGS THAT I NEED HELP WITH: 
+- [ ] Can't install 'Mechanize'
+
+
+
+
+
+
+
+
+= Hacker News Clone 
+
+== About
 This project is completed by Katharine Chen for the Conventional Rails assessment for Epicodus.
 
-##Description
+== Description
 This is simple clone of the popular tech new website Hacker News.
 
-##Current Functionality
+== Current Functionality
 * As a user, I want to post a link, so that I can share it with other nerds.
 * As a user, I want to vote up other people's links, so that I can promote links that I like.
 * As a user, I can only vote for links that I haven't voted for and does not belong to me.
 
-##Installation
-Clone the repo in your terminal by entering:
-  git clone https://github.com/katharinechen/hacker_news.git
+== Installation
+Clone the repository in your terminal by entering:
+
+    git clone https://github.com/katharinechen/hacker_news.git
 
 Setup your environment by:
-  bundle
-  bundle update
+
+    bundle
+    bundle update
 
 Setup your database:
-  rake db:create
-  rake db:migrate
-  rake db:seed
+
+    rake db:create
+    rake db:migrate
+    rake db:seed
 
 To view the website, visit in your broswer:
-  localhost:3000
-
-
-
-
-
-
-
-
+  
+    localhost:3000
