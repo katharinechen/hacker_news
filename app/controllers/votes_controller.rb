@@ -16,7 +16,9 @@ class VotesController < ApplicationController
 
       if @vote.save
         flash[:notice] = "Thank you for submitting a vote."
-
+        @link = Link.find(params[:id] = @vote.link_id)
+        @link.sum_vote = @link.sum_vote + 1 
+        @link.save 
         redirect_to root_url
       end
     else

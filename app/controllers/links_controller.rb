@@ -4,7 +4,7 @@ class LinksController < ApplicationController
 
   def index
     @vote = Vote.new
-    @links = Link.all
+    @links = Link.recent
   end
 
   def new
@@ -22,6 +22,12 @@ class LinksController < ApplicationController
 
   def destroy
   end
+
+  def popular
+    @vote = Vote.new
+    @links = Link.popular #with popular scope  
+    render "popular"
+  end 
 
 private
 
