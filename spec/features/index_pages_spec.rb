@@ -32,7 +32,6 @@ describe "users can only vote once for links they did not create" do
     click_on("button-#{@link2.id}")
     expect(page).to have_content("Your vote has not been submitted.")
   end
-
 end
 
 

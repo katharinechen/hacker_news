@@ -9,11 +9,11 @@ describe "submitting process" do
     fill_in "Password", :with => "password"
     click_button "Log In"
     visit "/links/new"
-    page.should have_content "Create a new Link"
+    expect(page).to have_content("Create a new Link") 
   end
 
   it "redirect non-users to the sign in page when they click the submit link" do
     visit "/links/new"
-    page.should have_content "Log In"
+    expect(page).to have_content("Log In")
   end
 end

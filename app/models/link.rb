@@ -4,7 +4,7 @@ class Link < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :user
-  has_many :comments
+  has_many :comments, :as => :commentable 
   has_many :votes
 
   #working code: re-use after Mechanize gem is fixed

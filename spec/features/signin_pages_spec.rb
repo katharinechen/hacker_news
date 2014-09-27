@@ -8,7 +8,7 @@ describe "signin process" do
     fill_in "Email", :with => "katharinechen.ny@gmail.com"
     fill_in "Password", :with => "password"
     click_button "Log In"
-    page.should have_content "Logged in!"
+    expect(page).to have_content("Logged in!")
   end
 
   it "does not sign in an user with the wrong password" do
@@ -17,7 +17,7 @@ describe "signin process" do
     fill_in "Email", :with => "katharinechen.ny@gmail.com"
     fill_in "Password", :with => "12345"
     click_button "Log In"
-    page.should have_content "Email or password is invalid"
+    expect(page).to have_content "Email or password is invalid"
   end
 end
 
