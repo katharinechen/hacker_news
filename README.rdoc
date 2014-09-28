@@ -1,5 +1,6 @@
 WORKING ON: 
 
+
 - [ ] As a user, I want to comment on a link, so that I can have a discussion about the article that was submitted.
 
 - [ ] As a user, I want to comment on a comment, so that I can have a discussion about the comment. This is hard!!! Don't feel like you have to complete this problem. It took me several hours the first time I did it. Here are a couple hints. Use polymorphism so that a comment can belong to a post or to another comment. Your associations will look something like this:
@@ -21,6 +22,7 @@ WORKING ON:
 - [ ] As a user, I want the link ranking to be a function of both the number of votes and the time since the post, so that popular links don't stay on the homepage forever. Hint: come up with a way to score links where they get a certain number of points for how new they are, and a certain number for how many votes they have. Don't spend too much time fussing with the algorithm - just make up something simple.
 - [ ] add images for flash[:notice] and flash[:alert] 
 - [ ] add appropriate links to match HackerNews Website 
+- [ ] add CRUD options like edit, update, and delete to models 
 
 THINGS THAT I NEED HELP WITH: 
 - [ ] Can't install 'Mechanize'

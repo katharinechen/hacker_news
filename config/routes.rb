@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :votes, except: [:index, :edit, :update, :show, :destroy]
 
   resources :links, except: [:edit, :update, :destroy] do
-    resources :comments
+    resources :comments, except: [:index, :edit, :update, :destroy]
   end
 end

@@ -13,7 +13,6 @@ class VotesController < ApplicationController
   def create
     @vote = Vote.new(vote_params)
     if (Vote.where(user_id: current_user.id, link_id: vote_params[:link_id]).take == nil) && (current_user.id != @vote.link.user_id)
-
       if @vote.save
         flash[:notice] = "Thank you for submitting a vote."
         @link = Link.find(params[:id] = @vote.link_id)

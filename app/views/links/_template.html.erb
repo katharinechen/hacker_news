@@ -23,10 +23,11 @@
         <td><a href="<%=link.url%>"><%#=link.page_title%> (<%= link.url %>)</a></td>
       </tr>
       <tr>
-        <td><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <%= link.comments.length %> comments</td>
+        <td><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <a href="/links/<%= link.id %>/comments/new"><%= link.comments.length %> comments</a></td>
       </tr>
       <% n = n+1 %>
     <% end %>
   </table>
 
 </div>
+
