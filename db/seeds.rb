@@ -18,5 +18,5 @@ Link.all.each do |link|
   link.update_attribute :created_at, (rand*10).days.ago
 end
 
-comment1 = Comment.create(user_id: "1", link_id: "1", text: "Comment 1", commentable_id: "1", commentable_type: "0")
-comment2 = Comment.create(user_id: "2", link_id:  "1", text: "Comment 2", commentable_id: "1", commentable_type: "0")
+comment1 = Comment.create(user_id: "1", text: "Comment 1", commentable_id: "1", commentable_type: "0")
+comment2 = Comment.create(user_id: "2", text: "Comment 2", commentable_id: "1", commentable_type: "0")
