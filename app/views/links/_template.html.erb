@@ -20,7 +20,7 @@
 
         </td>
         <td>
-          <a href="<%=link.url%>"><%=link.page_title%> (<%= link.url %>)</a></br>
+          <a href="<%=link.url%>"><%#=link.page_title%> (<%= link.url %>)</a></br>
           <span class="gray-comment"><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <a href="/links/<%= link.id %>/comments/new"><%= link.comments.length %> comments</a></span>
         </td>
       </tr>
