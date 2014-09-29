@@ -10,6 +10,7 @@ This is simple clone of the popular tech new website Hacker News.
 * As a user, I want to post a link, so that I can share it with other nerds.
 * As a user, I want to vote up other people's links, so that I can promote links that I like.
 * As a user, I can only vote for links that I haven't voted for and does not belong to me.
+* As a user, I can write comments to links. 
 
 == Installation
 Clone the repository in your terminal by entering:
