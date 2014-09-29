@@ -18,5 +18,21 @@
 @import "bootstrap";
 
 #orange {
-  background-color: orange;
+  background-color: #ff6600;
+}
+
+.gray-comment { 
+  color: #828282; 
+  font-size: 12px;
+}
+
+table { 
+  display: table; 
+  border-collapse: separate; 
+  border-color: gray;
+  border-spacing: 2px;
+}
+
+td { 
+  font-family: Verdana, Geneva, sans-serif;
 }

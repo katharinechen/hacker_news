@@ -6,9 +6,8 @@
   <table class="table table-condensed">
     <% @links.each do |link| %>
       <tr>
-        <td rowspan="2"><%= n %></td>
-        <td rowspan="2">
-
+        <td><%= n %></td>
+        <td>
           <% if current_user != nil %>
             <%= form_for @vote do |f| %>
               <%= f.hidden_field :user_id, :value => "#{current_user.id}"%>
@@ -20,10 +19,10 @@
           <% end %>
 
         </td>
-        <td><a href="<%=link.url%>"><%#=link.page_title%> (<%= link.url %>)</a></td>
-      </tr>
-      <tr>
-        <td><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <a href="/links/<%= link.id %>/comments/new"><%= link.comments.length %> comments</a></td>
+        <td>
+          <a href="<%=link.url%>"><%=link.page_title%> (<%= link.url %>)</a></br>
+          <span class="gray-comment"><%= link.votes.length %> points by <%= link.user.email %> <%= distance_of_time_in_words(Time.now, link.created_at) %> ago | <a href="/links/<%= link.id %>/comments/new"><%= link.comments.length %> comments</a></span>
+        </td>
       </tr>
       <% n = n+1 %>
     <% end %>

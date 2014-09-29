@@ -20,9 +20,6 @@ class LinksController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
   def popular
     @vote = Vote.new
     @links = Link.popular #with popular scope  

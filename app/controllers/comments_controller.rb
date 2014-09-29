@@ -10,10 +10,11 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    @link = Link.find(params[:link_id])
 
     if @comment.save 
       flash[:notice] = "Your comment has been saved."
-      redirect_to link_path
+      redirect_to new_link_comment_path(@link)
     else
       flash[:alert] = "Your comment has not been saved. Try again."
       render "new"
@@ -23,6 +24,6 @@ class CommentsController < ApplicationController
 private 
   
   def comment_params 
-    params.require(:comment).permit(:user_id, :link_id, :text, :commentable_id, :commentable_type)
+    params.require(:comment).permit(:user_id, :text, :commentable_id, :commentable_type)
   end 
 end 
